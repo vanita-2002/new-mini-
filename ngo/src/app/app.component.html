@@ -1,0 +1,60 @@
+<h1>{{ title }}</h1>
+<form [formGroup]="loginForm" (ngSubmit)="loginUser()">
+<label for="user">Name: &nbsp;&nbsp;</label>
+  <input
+    type="text"
+    placeholder="Enter Name"
+    id="user" name="user"
+    formControlName="user"
+  />
+  <br />
+  <br />
+  <label for="password">Password: &nbsp;&nbsp; </label>
+  <input
+    type="text"
+    placeholder="Enter Password"
+    id="password" name="password"
+    formControlName="password"
+  />
+  <br />
+  <br />
+  <label for="email">Email:&nbsp;&nbsp;  </label>
+  <input
+  type="email"
+  placeholder="Enter email"
+  id="email" name="email"
+  formControlName="email"
+/>
+<br />
+<br />
+<label for="contact">PhoneNo:&nbsp;&nbsp;</label>
+<input
+type="text"
+placeholder="Enter phonenumber"
+id="contact" name="contact"
+formControlName="contact"
+/>
+<br />
+<br />
+<label for="occupation">Occupation:&nbsp;&nbsp;</label>
+<input
+type="text"
+placeholder="Enter Occupation"
+id="occupation" name="occupation"
+formControlName="occupation"
+/>
+<br />
+<br />
+<label for="location">Location:&nbsp;&nbsp;</label>
+<input
+type="text"
+placeholder="Enter location"
+id="location" name="location"
+formControlName="location"
+/>
+<br />
+<br />
+
+
+  <button>Login</button>
+</form>
