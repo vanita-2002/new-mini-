@@ -1,6 +1,7 @@
 form{
 font-size: large;
 
+
 }
 input{
   width: 30%;
@@ -17,4 +18,12 @@ button{
   display: block;
   border: 1px solid black;
   box-sizing: border-box;
+}
+input.largerCheckbox {
+  width: 40px;
+  height: 40px;
+}
+input.largerRadio {
+  width: 30px;
+  height: 20px;
 }

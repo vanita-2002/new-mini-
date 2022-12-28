@@ -1,10 +1,11 @@
-<h1>{{ title }}</h1>
+
+<legend>{{ title }}</legend>
 <form [formGroup]="loginForm" (ngSubmit)="loginUser()">
-<label for="user">Name: &nbsp;&nbsp;</label>
-  <input
+<label for="user">Name: &nbsp;&nbsp; </label>
+  <input required
     type="text"
     placeholder="Enter Name"
-    id="user" name="user"
+    value="user" name="user"
     formControlName="user"
   />
   <br />
@@ -13,7 +14,7 @@
   <input
     type="text"
     placeholder="Enter Password"
-    id="password" name="password"
+    value="password" name="password"
     formControlName="password"
   />
   <br />
@@ -22,7 +23,7 @@
   <input
   type="email"
   placeholder="Enter email"
-  id="email" name="email"
+  value="email" name="email"
   formControlName="email"
 />
 <br />
@@ -31,7 +32,7 @@
 <input
 type="text"
 placeholder="Enter phonenumber"
-id="contact" name="contact"
+value="contact" name="contact"
 formControlName="contact"
 />
 <br />
@@ -40,21 +41,174 @@ formControlName="contact"
 <input
 type="text"
 placeholder="Enter Occupation"
-id="occupation" name="occupation"
+value="occupation" name="occupation"
 formControlName="occupation"
 />
 <br />
 <br />
-<label for="location">Location:&nbsp;&nbsp;</label>
+<label for="location">Address:&nbsp;&nbsp;</label>
 <input
 type="text"
 placeholder="Enter location"
-id="location" name="location"
+value="location" name="location"
 formControlName="location"
 />
 <br />
 <br />
+<p >Available Days:&nbsp;&nbsp;</p>
+<br>
+<br>
+<label for="one">Monday&nbsp;&nbsp;</label>
+<input
+type="checkbox" class="largerCheckbox"
+value="one" name="avl"
+formControlName="one"
+/>
+<br />
+<br />
+<label for="two">Tuesday&nbsp;&nbsp;</label>
+<input
+type="checkbox" class="largerCheckbox"
+value="two" name="avl"
+formControlName="two"
+/>
+<br />
+<br />
+<label for="available">Wednesday&nbsp;&nbsp;</label>
+<input
+type="checkbox" class="largerCheckbox"
+value="three" name="avl"
+formControlName="three"
+/>
+<br />
+<br />
+<label for="available">Thursday&nbsp;&nbsp;</label>
+<input
+type="checkbox" class="largerCheckbox"
+value="four" name="avl"
+formControlName="four"
+/>
+<br />
+<br />
+<label for="available">Friday&nbsp;&nbsp;</label>
+<input
+type="checkbox" class="largerCheckbox"
+value="five" name="avl"
+formControlName="five"
+/>
+<br />
+<br />
+<label for="available">Saturday&nbsp;&nbsp;</label>
+<input
+type="checkbox" class="largerCheckbox"
+value="six" name="avl"
+formControlName="six"
+/>
+<br />
+<br />
+<label for="available">Sunday&nbsp;&nbsp;</label>
+<input
+type="checkbox" class="largerCheckbox"
+value="seven" name="avl"
+formControlName="seven"
+/>
+<br />
+<br />
+
+<div class="form-group mb-3 col-md-6">
+  <label for="Shift" class="fst-italic fw-bold text-lead"><h5>Select Shift</h5></label>
+<select name="Shift" id="Shift" class="form-control" style="width: 100%; border-radius: 5px;" formControlName="Shift">
+  <option value=""></option>
+  <option value="First">Morning</option>
+  <option value="Second">Afternoon</option>
+  <option value="Third">Night</option>
+</select>
+</div>
+<div class="form-group mb-3 col-md-6">
+  <label for="experience" class="fst-italic fw-bold text-lead"><h5>Do you have any volunteer experience</h5></label>
+<select name="experience" id="experience" class="form-control" style="width: 100%; border-radius: 5px;" formControlName="experience">
+  <option value=""></option>
+  <option value="First">Yes</option>
+  <option value="Second">No</option>
+
+</select>
+</div>
 
 
-  <button>Login</button>
+
+<!-- <p >Preferred Shift:&nbsp;&nbsp;</p>
+<br>
+<br>
+<label for="available">Morning&nbsp;&nbsp;</label>
+<input
+type="radio" class="largerRadio"
+value="mrn" name="sft"
+formControlName="mrn"
+/>
+<br />
+<br />
+<label for="available">Afternoon&nbsp;&nbsp;</label>
+<input
+type="radio" class="largerRadio"
+value="aft" name="sft"
+formControlName="aft"
+/>
+<br />
+<br />
+<label for="available">Night&nbsp;&nbsp;</label>
+<input
+type="radio" class="largerRadio"
+value="nyt" name="sft"
+formControlName="nyt"
+/>
+<br />
+<br />
+<p>You have any volunteer experience &nbsp;&nbsp;</p>
+<br>
+<br>
+<label for="exp1">Yes&nbsp;&nbsp;</label>
+<input
+type="radio" class="largerRadio"
+value="exp1" name="expe"
+formControlName="exp1"
+/>
+<br />
+<br />
+<label for="exp2">No&nbsp;&nbsp;</label>
+<input
+type="radio" class="largerRadio"
+value="exp2" name="expe"
+formControlName="exp2"
+/>
+<br />
+<br />  -->
+<p >Terms & conditions:&nbsp;&nbsp;</p>
+<br>
+<br>
+<label for="onee">1.	To help AnyOrg fulfil its (write in your service here).
+<br>
+  2.	To perform my volunteering role to the best of my ability
+<br>
+  3.	To adhere to the organisation’s rules, procedures and standards, including health and safety procedures and its equal opportunities policy in relation to its staff, volunteers and clients.
+<br>
+  4.	To maintain the confidential information of the organisation and of its clients.
+<br>
+  5.	To meet the time commitments and standards undertaken, other than in exceptional circumstances, and provide reasonable notice so that alternative arrangement can be made.
+<br>
+  6.	To provide referees, as agreed, who may be contacted, and to agree to a police check being carried out where necessary.
+  <br>
+  </label>
+  <input
+type="checkbox" class="largerCheckbox"
+value="onee" name="onee"
+formControlName="onee"
+/>
+
+
+
+<input type="submit" value="submit" name="submit" required><br><br>
+<div>For any queries please contact:
+    <a href="mailto:vanitadaryani598@gmail.com">send email</a>
+</div>
+
 </form>
