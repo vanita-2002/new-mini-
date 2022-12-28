@@ -1,0 +1,84 @@
+<h2>{{ title }}</h2>
+<form [formGroup]="loginForm" (ngSubmit)="loginUser()">
+<label for="user">Name: &nbsp;&nbsp; </label>
+  <input required
+    type="text"
+    placeholder="Enter Name"
+    value="user" name="user"
+    formControlName="user"
+  />
+  <br />
+  <br />
+  <label for="password">Password: &nbsp;&nbsp; </label>
+  <input
+    type="text"
+    placeholder="Enter Password"
+    value="password" name="password"
+    formControlName="password"
+  />
+  <br />
+  <br />
+  <label for="email">Email:&nbsp;&nbsp;  </label>
+  <input
+  type="email"
+  placeholder="Enter email"
+  value="email" name="email"
+  formControlName="email"
+/>
+<br />
+<br />
+<label for="contact">PhoneNo:&nbsp;&nbsp;</label>
+<input
+type="text"
+placeholder="Enter phonenumber"
+value="contact" name="contact"
+formControlName="contact"
+/>
+<br />
+<br />
+<label for="occupation">Occupation:&nbsp;&nbsp;</label>
+<input
+type="text"
+placeholder="Enter Occupation"
+value="occupation" name="occupation"
+formControlName="occupation"
+/>
+<br />
+<br />
+<label for="location">Address:&nbsp;&nbsp;</label>
+<input
+type="text"
+placeholder="Enter location"
+value="location" name="location"
+formControlName="location"
+/>
+<br />
+<br />
+<label for="amt">Amount:&nbsp;&nbsp;</label>
+<input
+type="text"
+placeholder="Enter amount to be donated"
+ name="amt"
+formControlName="amt"
+/>
+<br />
+<br />
+<div class="form-group mb-3 col-md-6">
+  <label for="pay" class="fst-italic fw-bold text-lead"><h5>How would you like to pay</h5></label>
+<select name="pay" id="pay" class="form-control" style="width: 100%; border-radius: 5px;" formControlName="pay">
+  <option value=""></option>
+  <option value="Cash">Cash</option>
+  <option value="Cheque">Cheque</option>
+  <option value="debit">Debit Card</option>
+<option value="credit">Credit Card</option>
+</select>
+</div>
+<br> <br>
+
+
+<input type="submit" value="Donate" name="submit" required><br><br>
+<div>For any queries please contact:
+    <a href="mailto:vanitadaryani598@gmail.com">send email</a>
+</div>
+
+</form>
